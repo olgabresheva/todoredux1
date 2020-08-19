@@ -1,7 +1,7 @@
 import React from 'react';
 import './Main.css';
 import ToDoCreateForm from "./ToDoCreateForm";
-import ToDoItem from "./ToDoItem";
+import ToDoList from "./ToDoList";
 
 function App() {
 
@@ -9,7 +9,7 @@ function App() {
         <div className="container">
             <ToDoCreateForm/>
             <hr/>
-            <ToDoItem/>
+            <ToDoList/>
         </div>
     );
 }

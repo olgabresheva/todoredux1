@@ -4,7 +4,7 @@ const initialState = {
     tasks: [
         {id: uuid(), name: "Task -1", description: "Description -1", done: true},
         {id: uuid(), name: "Task -2", description: "Description -2", done: false},
-        {id: uuid(), name: "Task -3", description: "Description -3", done: true},
+        {id: uuid(), name: "Task -3", description: "Description -3", done: true}
     ],
 };
 

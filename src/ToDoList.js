@@ -9,9 +9,20 @@ function ToDoList(props) {
 
     return (
         <div className="ToDoList">
-
+            <ul className="list-unstyled">
+                {props.tasks.map(el => <li key={el.id}>
+                    <ToDoItem name={el.name}
+                              description={el.description}
+                              done={el.done}
+                              id={el.id}/>
+                </li>)}
+            </ul>
         </div>
-    )
+    );
 }
 
-export default ToDoList;
+const mapStateToProps = state => ({
+    tasks: state.tasks,
+})
+
+export default connect(mapStateToProps, null)(ToDoList);

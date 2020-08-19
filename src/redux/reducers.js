@@ -2,9 +2,10 @@ import {uuid} from "uuidv4";
 
 const initialState = {
     tasks: [
-        {id: uuid(), name: "Task -1", description: "Description -1", done: true},
-        {id: uuid(), name: "Task -2", description: "Description -2", done: false},
-        {id: uuid(), name: "Task -3", description: "Description -3", done: true}
+        {id: uuid(), name: "React", description: "Review Documentation, Practice", done: false},
+        {id: uuid(), name: "Redux", description: "Review Documentation, Practice Even More!!!", done: false},
+        {id: uuid(), name: "CSS", description: "Listen lectures", done: false},
+        {id: uuid(), name: "Done Task", description: "Test", done: true}
     ],
 };
 

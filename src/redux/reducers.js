@@ -51,6 +51,23 @@ const task = (state = initialState, action) => {
                 tasks: tasksEdit
             }
 
+        case 'TASK_PRIORITY_CHG':
+            let i = state.tasks.findIndex(el => el.id === action.payload.id);
+            const tasksPriorityChg = [...state.tasks];
+            if (action.payload.direction === "up") {
+                if (i !== 0) {
+                    tasksPriorityChg.splice(i - 1, 0, tasksPriorityChg.splice(i, 1)[0])
+                }
+            }
+            if (action.payload.direction === "down") {
+                tasksPriorityChg.splice(i + 1, 0, tasksPriorityChg.splice(i, 1)[0])
+            }
+
+            return {
+                ...state, tasks: tasksPriorityChg
+            }
+
+
         default:
             return state;
     }

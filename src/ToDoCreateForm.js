@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import './Main.css';
 import 'bootstrap/dist/css/bootstrap.min.css'
-import { connect } from 'react-redux';
+import {connect} from 'react-redux';
 
 
 function ToDoCreateForm(props) {
@@ -34,6 +34,7 @@ function ToDoCreateForm(props) {
         </div>
     );
 }
+
 const mapDispatchToProps = (dispatch) => ({
     addNewTask: (name, description) => dispatch({type: 'TASK_ADD', payload: {name, description}})
 });

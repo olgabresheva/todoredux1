@@ -26,11 +26,25 @@ function ToDoCreateForm(props) {
 
     return (
         <div>
-
-            <input type="text" value={taskNameInput} onChange={e => setTaskNameInput(e.target.value)}/>
-            <input type="text" value={taskDescriptionInput} onChange={newTaskDescriptionInput}/>
-            <button disabled={addTaskDisabled} onClick={addNewTask}>Add Task</button>
-
+            <label htmlFor="exampleFormControlInput1"><strong>Your To Do List</strong></label><br/>
+            <form>
+            <div className="row">
+                <div className="col">
+                    <input className="form-control form-control-sm" placeholder="Enter Task Name" type="text"
+                           value={taskNameInput} onChange={e => setTaskNameInput(e.target.value)}/>
+                </div>
+                <div className="col">
+                    <input className="form-control form-control-sm" placeholder="Enter Task Description" type="text"
+                           value={taskDescriptionInput}
+                           onChange={newTaskDescriptionInput}/>
+                </div>
+            </div>
+            <div className="row">
+                <div className="col">
+            <button type="submit" className="btn btn-primary btn-sm" disabled={addTaskDisabled} onClick={addNewTask}>Add Task</button>
+                </div>
+            </div>
+            </form>
         </div>
     );
 }
